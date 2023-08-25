@@ -17,14 +17,14 @@
 apply plugin: "com.android.library"
 
 dependencies {
-    implementation project(":play-services-maps")
+//    implementation project(":play-services-maps")
 
     implementation "org.microg:vtm-android:0.9.1-mod"
-    implementation "org.microg:vtm-android:0.9.1-mod:natives-armeabi"
-    implementation "org.microg:vtm-android:0.9.1-mod:natives-armeabi-v7a"
+//    implementation "org.microg:vtm-android:0.9.1-mod:natives-armeabi"
+//    implementation "org.microg:vtm-android:0.9.1-mod:natives-armeabi-v7a"
     implementation "org.microg:vtm-android:0.9.1-mod:natives-arm64-v8a"
-    implementation "org.microg:vtm-android:0.9.1-mod:natives-x86"
-    implementation "org.microg:vtm-android:0.9.1-mod:natives-x86_64"
+//    implementation "org.microg:vtm-android:0.9.1-mod:natives-x86"
+//    implementation "org.microg:vtm-android:0.9.1-mod:natives-x86_64"
     implementation "org.microg:vtm-extras:0.9.1-mod"
     implementation "org.microg:vtm-jts:0.9.1-mod"
     implementation project(":play-services-maps-core-vtm:vtm-microg-theme")
@@ -53,7 +53,7 @@ android {
         targetSdkVersion androidTargetSdk
 
         ndk {
-            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            abiFilters "arm64-v8a"
         }
 
         buildConfigField "String", "BASE_PACKAGE_NAME", "\"$basePackageName\""

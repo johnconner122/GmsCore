@@ -71,29 +71,23 @@ public class AskPushPermission extends FragmentActivity {
             s.setSpan(new StyleSpan(Typeface.BOLD), raw.indexOf(label), raw.indexOf(label) + label.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
 
             ((TextView) findViewById(R.id.permission_message)).setText(s);
-            findViewById(R.id.permission_allow_button).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (answered) return;
-                    database.noteAppKnown(packageName, true);
-                    answered = true;
-                    Bundle bundle = new Bundle();
-                    bundle.putBoolean(EXTRA_EXPLICIT, true);
-                    resultReceiver.send(Activity.RESULT_OK, bundle);
-                    finish();
-                }
+            findViewById(R.id.permission_allow_button).setOnClickListener(view -> {
+                if (answered) return;
+                database.noteAppKnown(packageName, true);
+                answered = true;
+                Bundle bundle = new Bundle();
+                bundle.putBoolean(EXTRA_EXPLICIT, true);
+                resultReceiver.send(Activity.RESULT_OK, bundle);
+                finish();
             });
-            findViewById(R.id.permission_deny_button).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (answered) return;
-                    database.noteAppKnown(packageName, false);
-                    answered = true;
-                    Bundle bundle = new Bundle();
-                    bundle.putBoolean(EXTRA_EXPLICIT, true);
-                    resultReceiver.send(Activity.RESULT_CANCELED, bundle);
-                    finish();
-                }
+            findViewById(R.id.permission_deny_button).setOnClickListener(view -> {
+                if (answered) return;
+                database.noteAppKnown(packageName, false);
+                answered = true;
+                Bundle bundle = new Bundle();
+                bundle.putBoolean(EXTRA_EXPLICIT, true);
+                resultReceiver.send(Activity.RESULT_CANCELED, bundle);
+                finish();
             });
         } catch (PackageManager.NameNotFoundException e) {
             finish();

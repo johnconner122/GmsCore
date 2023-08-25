@@ -89,19 +89,19 @@ object SettingsContract {
         )
     }
 
-    object Exposure {
-        private const val id = "exposureNotification"
-        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
-        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
-
-        const val SCANNER_ENABLED = "exposure_scanner_enabled"
-        const val LAST_CLEANUP = "exposure_last_cleanup"
-
-        val PROJECTION = arrayOf(
-            SCANNER_ENABLED,
-            LAST_CLEANUP,
-        )
-    }
+//    object Exposure {
+//        private const val id = "exposureNotification"
+//        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
+//        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
+//
+//        const val SCANNER_ENABLED = "exposure_scanner_enabled"
+//        const val LAST_CLEANUP = "exposure_last_cleanup"
+//
+//        val PROJECTION = arrayOf(
+//            SCANNER_ENABLED,
+//            LAST_CLEANUP,
+//        )
+//    }
 
     object SafetyNet {
         private const val id = "safety-net"
@@ -145,21 +145,21 @@ object SettingsContract {
         )
     }
 
-    object Location {
-        private const val id = "location"
-        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
-        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
-
-        const val WIFI_MLS = "location_wifi_mls"
-        const val WIFI_MOVING = "location_wifi_moving"
-        const val CELL_MLS = "location_cell_mls"
-
-        val PROJECTION = arrayOf(
-            WIFI_MLS,
-            WIFI_MOVING,
-            CELL_MLS
-        )
-    }
+//    object Location {
+//        private const val id = "location"
+//        fun getContentUri(context: Context) = Uri.withAppendedPath(getAuthorityUri(context), id)
+//        fun getContentType(context: Context) = "vnd.android.cursor.item/vnd.${getAuthority(context)}.$id"
+//
+//        const val WIFI_MLS = "location_wifi_mls"
+//        const val WIFI_MOVING = "location_wifi_moving"
+//        const val CELL_MLS = "location_cell_mls"
+//
+//        val PROJECTION = arrayOf(
+//            WIFI_MLS,
+//            WIFI_MOVING,
+//            CELL_MLS
+//        )
+//    }
 
     private fun <T> withoutCallingIdentity(f: () -> T): T {
         val identity = Binder.clearCallingIdentity()

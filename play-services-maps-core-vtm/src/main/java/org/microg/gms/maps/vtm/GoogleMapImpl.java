@@ -277,7 +277,7 @@ public class GoogleMapImpl extends IGoogleMapDelegate.Stub
     private String getNextPolygonId() {
         return "p" + polygonCounter++;
     }
-    
+
     /*
     Camera
      */
@@ -343,7 +343,7 @@ public class GoogleMapImpl extends IGoogleMapDelegate.Stub
             }
         }
     }
-    
+
     /*
     Markers, polylines, polygons, overlays, etc
      */
@@ -471,7 +471,7 @@ public class GoogleMapImpl extends IGoogleMapDelegate.Stub
             }
         }
     }
-    
+
     /*
     Map options
      */
@@ -536,7 +536,7 @@ public class GoogleMapImpl extends IGoogleMapDelegate.Stub
     public void setBuildingsEnabled(boolean buildingsEnabled) throws RemoteException {
         backendMap.setBuildings(buildingsEnabled);
     }
-    
+
     /*
     Ui Settings
      */
@@ -563,7 +563,7 @@ public class GoogleMapImpl extends IGoogleMapDelegate.Stub
         backendMap.setTiltGesturesEnabled(settings.isTiltGesturesEnabled());
         backendMap.setZoomGesturesEnabled(settings.isZoomGesturesEnabled());
     }
-    
+
     /*
     Listener and callback setters
      */
@@ -690,7 +690,7 @@ public class GoogleMapImpl extends IGoogleMapDelegate.Stub
         Log.d(TAG, "unimplemented Method: onStop");
 
     }
-    
+
     /*
     Misc
      */

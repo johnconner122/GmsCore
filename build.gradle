@@ -71,7 +71,7 @@ def execResult(...arguments) {
     return stdout.toString()
 }
 
-def gmsVersion = "23.16.57"
+def gmsVersion = "23.30.13"
 def gmsVersionCode = Integer.parseInt(gmsVersion.replaceAll('\\.', ''))
 def gitVersionBase = execResult('describe', '--tags', '--abbrev=0', '--match=v[0-9]*').trim().substring(1)
 def gitCommitCount = Integer.parseInt(execResult('rev-list', '--count', "v$gitVersionBase..HEAD").trim())
@@ -103,7 +103,7 @@ allprojects {
 
     group = 'org.microg.gms'
     version = ourVersionName
-    ext.appVersionCode = 232115000
+    ext.appVersionCode = 233013000
     ext.isReleaseVersion = false
 }
 

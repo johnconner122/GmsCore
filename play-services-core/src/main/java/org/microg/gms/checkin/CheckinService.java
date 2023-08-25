@@ -36,8 +36,8 @@ import com.google.android.gms.R;
 import com.google.android.gms.checkin.internal.ICheckinService;
 
 import org.microg.gms.auth.AuthConstants;
-import org.microg.gms.common.ForegroundServiceInfo;
 import org.microg.gms.common.ForegroundServiceContext;
+import org.microg.gms.common.ForegroundServiceInfo;
 import org.microg.gms.gcm.McsService;
 import org.microg.gms.people.PeopleManager;
 

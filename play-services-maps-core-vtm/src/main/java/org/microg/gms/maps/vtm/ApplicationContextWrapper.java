@@ -20,8 +20,6 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.pm.PackageManager;
 
-import org.microg.gms.common.Constants;
-
 public class ApplicationContextWrapper extends ContextWrapper {
     private Context applicationContext;
 
